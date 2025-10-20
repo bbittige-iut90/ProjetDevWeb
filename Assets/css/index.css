@@ -103,12 +103,16 @@ nav a:hover{
      var(--vert-jaune));
     background-size: 600% 600%;
     background-clip: text;
-    font-size: 50px;
+    font-size:75px;
     animation: intro_titre 1s ease forwards, anime_titre 4s ease infinite;
     z-index:-1;
+}
+.titre h1{
     margin-top: 8%;
+    margin-bottom: 0;
 }
 .titre p {
+    margin-top: 20px;
     text-align: center;
     color: transparent;
     background: linear-gradient(135deg,
@@ -176,7 +180,7 @@ nav a:hover{
     margin-top: 150px;
 }
 .shop{
-    height: 600px;
+    height: 850px;
     padding: 10%;
     overflow: hidden;
 }
@@ -215,6 +219,43 @@ nav a:hover{
     margin-right: -150px;
 }
 
+.shop video{
+    width: 100%;
+    border-radius: 50px;
+}
+.shop .cartes{
+    width: 100%;
+    height: 200px;
+}
+.shop .cartes div{
+    position: absolute;
+    border-radius: 10px;
+    width: 12%;
+    height: 250px;
+    background-color: var(--noir);
+    transform-origin: center center;
+}
+.shop .cartes div:hover{
+    z-index: 5;
+    transform: rotateY(180deg);
+    transition: all .4s ease;
+}
+.carte1{
+    margin-top: -650px;
+    right: 1050px;
+}
+.carte2{
+    margin-top: -650px;
+    left: 1050px;
+}
+.carte3{
+    margin-top: -300px;
+    right: 1050px;
+}
+.carte4{
+    margin-top: -300px;
+    left: 1050px;
+}
 /*animation*/
 
 
@@ -279,7 +320,6 @@ nav a:hover{
         transform: rotateZ(0);
     }
 }
-
 /*responsive*/
 
 @media (max-width: 767px) {
@@ -298,21 +338,42 @@ nav a:hover{
         background-color: transparent;
         backdrop-filter: blur(10px);
         top: 1%;
-        box-shadow: inset 0 0 10px #FFFFFF6a;
+        box-shadow: inset 0 0 5px #FFFFFF6a;
         border: 3px solid #FFFFFF6a ;
         gap: 15%;
-        height: 5%;
-        width: 60%;
+        height: 2%;
+        width: 30%;
         font-size: 15px;
         border-radius: 50px;
         transition: all .4s ease-in-out;
-    }
-    
-    nav a {
-        color: #FFFFFF;
         text-decoration: none;
     }
-    
+    nav:hover{
+        box-shadow: inset 0 0 10px #ffffff9a;
+        border: 3px solid #ffffff9a ;
+        backdrop-filter: blur(20px);
+    }
+    header nav a {
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: all .4s ease-in-out;
+    }
+    nav a:hover{
+        color: transparent;
+        background: linear-gradient(135deg,
+         var(--blanc),
+         var(--blanc),
+         var(--blanc),
+         var(--noir),
+         var(--noir),
+         var(--blanc),
+         var(--blanc),
+         var(--blanc));
+        background-size: 600% 600%;
+        background-clip: text;
+        animation: anime_titre 2s ease forwards;
+        scale: 1.05;
+    }
     
     .titre{
         text-align: center;
@@ -434,6 +495,9 @@ nav a:hover{
         
     }
     
+    .shop video{
+        border-radius: 30px;
+    }
 
     /*respondsive animation*/
 
