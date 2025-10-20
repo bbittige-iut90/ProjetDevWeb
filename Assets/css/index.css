@@ -19,6 +19,7 @@ body,html{
     background-color: var(--noir);
     padding: 0;
     margin: 0;
+    overflow-x: hidden; 
 }
 
 header{
@@ -95,18 +96,13 @@ nav a:hover{
     text-align: center;
     color: transparent;
     background: linear-gradient(135deg,
-     var(--blanc),
      var(--vert-jaune),
      var(--vert-fonce),
-     var(--noir),
-     var(--noir),
-     var(--vert-fonce),
-     var(--vert-jaune),
-     var(--blanc));
+     var(--vert-jaune));
     background-size: 600% 600%;
     background-clip: text;
     font-size: 40px;
-    animation: intro_titre 1s ease forwards, anime_titre 5s ease forwards;
+    animation: intro_titre 1s ease forwards, anime_titre 4s ease infinite;
     z-index:-1;
     margin-top: 10%;
 }
@@ -126,30 +122,46 @@ nav a:hover{
 
 .intro{
     height: 300px;
-    background-color: #35BA14;
+    background-color: var(--vert-fonce);
     text-align: start;
     padding: 50px;
     margin-top: 800px;
+    overflow: hidden; 
+    box-shadow: 0  -10px 400px var(--vert-fonce);
+}
+.slider{
+    width: 100%;
+}
+.slider .liste{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+}
+
+.slider .liste h1{
+    left: 100%;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 80px;
+    text-shadow: 0 0 10px #1c1c1c8f;
     color: var(--vert-jaune);
-    overflow: hidden;
-}
-.intro hr {
-    float: left;
-    border-width: 10px;
-    height: 220px;
-    border-color: #FFFFFF;
-    border-style:solid;
-    border-radius: 20px;
-    margin-right: 5%;
-}
-.intro h1{
-    font-size: 60px;
+    width: 100%;
+    animation: defilement 6s linear infinite;
+    animation-delay: calc((var(--position) * 1.75s) - 1s);
 }
 
 .intro p{
-    font-size: 50px;
+    font-size: 70px;
+    background-color: #B6EB17; 
+    padding-left: 20px;
+    color: var(--vert-fonce);
+    margin-top: 150px;
 }
-
+.shop{
+    height: 600px;
+}
 /*animation*/
 
 
@@ -197,6 +209,14 @@ nav a:hover{
     }
 }
 
+@keyframes defilement{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -70%;
+    }
+}
 /*responsive*/
 
 @media (max-width: 767px) {
@@ -264,6 +284,53 @@ nav a:hover{
         margin-top: -50px;
         animation: image_d_intro 1s ease forwards;
     }
-    
-    
+    .slider{
+        width: 100%;
+    }
+    .slider .liste{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 10%;
+    }
+
+    .slider .liste h1{
+        left: 100%;
+        position: absolute;
+        white-space: nowrap;
+        font-size: 40px;
+        text-shadow: 0 0 10px #1c1c1c8f;
+        color: var(--vert-jaune);
+        width: 100%;
+        animation: defilement 6s linear infinite;
+        animation-delay: calc((var(--position) * 1.8s) - 2s);
+    }
+    .intro{
+        height: 200px;
+        background-color: var(--vert-fonce);
+        text-align: start;
+        padding: 10px;
+        margin-top: 500px;
+        overflow: hidden; 
+        box-shadow: 0  -10px 400px var(--vert-fonce);
+    }
+    .intro p{
+        font-size: 30px;
+        background-color: #B6EB17; 
+        padding-left: 5px;
+        color: var(--vert-fonce);
+        margin-top: 100px;
+    }
+
+    /*respondsive animation*/
+
+    @keyframes defilement{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -400%;
+    }
+    }
 }
