@@ -3,12 +3,14 @@
     font-weight: 400;
     font-style: normal;
 }
-.bricolage-grotesque {
-    font-family: "Bricolage Grotesque", sans-serif;
+.exo-2{
+    font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 200;
     font-style: normal;
-}
+  }
+  
+  
   /*fonts*/
 
 body,html{
@@ -50,7 +52,7 @@ nav{
 nav:hover{
     box-shadow: inset 0 0 10px #ffffff9a;
     border: 3px solid #ffffff9a ;
-    background-color: #242424;
+    backdrop-filter: blur(20px);
 }
 header nav a {
     color: #FFFFFF;
@@ -101,22 +103,36 @@ nav a:hover{
      var(--vert-jaune));
     background-size: 600% 600%;
     background-clip: text;
-    font-size: 40px;
+    font-size: 50px;
     animation: intro_titre 1s ease forwards, anime_titre 4s ease infinite;
     z-index:-1;
-    margin-top: 10%;
+    margin-top: 8%;
 }
-
+.titre p {
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(135deg,
+     var(--vert-jaune),
+     var(--vert-fonce),
+     var(--vert-jaune));
+    background-size: 600% 600%;
+    background-clip: text;
+    font-size: 50px;
+    animation: intro_titre 1s ease forwards, anime_titre 4s ease infinite;
+    z-index:-1;
+}
 .images_acc #img_g{
     width: 40%;
     float: left;
     margin-left: -5%;
+    margin-top: -80px;
     animation: image_g_intro 1s ease forwards;
 }
 .images_acc #img_d{
     width: 30%;
     float: right;
     margin-right: -5%;
+    margin-top: -80px;
     animation: image_d_intro 1s ease forwards;
 }
 
@@ -125,7 +141,7 @@ nav a:hover{
     background-color: var(--vert-fonce);
     text-align: start;
     padding: 50px;
-    margin-top: 800px;
+    margin-top: 500px;
     overflow: hidden; 
     box-shadow: 0  -10px 400px var(--vert-fonce);
 }
@@ -161,7 +177,44 @@ nav a:hover{
 }
 .shop{
     height: 600px;
+    padding: 10%;
+    overflow: hidden;
 }
+
+.shop h1{
+    font-size: 70px;
+    color: var(--blanc);
+}
+
+.shop p{
+    font-size: 40px;
+    color: var(--blanc);
+}
+.shop #droite{
+    width: 20%;
+    z-index: -1;
+    float: right;
+    margin-top: -130px;
+    margin-right: -300px;
+    transition: all .8s ease-in-out;
+}
+.shop:hover #droite{
+    margin-top: -130px;
+    margin-right: -170px;
+}
+.shop #gauche{
+    width: 20%;
+    z-index: -1;
+    float: left;
+    margin-top: -250px;
+    margin-right: -250px;
+    transition: all .8s ease-in-out;
+}
+.shop:hover #gauche{
+    margin-top: -160px;
+    margin-right: -150px;
+}
+
 /*animation*/
 
 
@@ -217,6 +270,16 @@ nav a:hover{
         left: -70%;
     }
 }
+
+@keyframes spin{
+    0%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+
 /*responsive*/
 
 @media (max-width: 767px) {
@@ -265,23 +328,37 @@ nav a:hover{
          var(--blanc));
         background-size: 600% 600%;
         background-clip: text;
-        font-size: 20px;
+        font-size: 28px;
         animation: intro_titre 1s ease forwards, anime_titre 5s ease infinite;
         z-index:-1;
         margin-top: 20%;
+    }
+    .titre p {
+        text-align: center;
+        color: transparent;
+        background: linear-gradient(135deg,
+         var(--vert-jaune),
+         var(--vert-fonce),
+         var(--vert-jaune));
+        background-size: 600% 600%;
+        background-clip: text;
+        font-size: 28px;
+        animation: intro_titre 1s ease forwards, anime_titre 4s ease infinite;
+        z-index:-1;
     }
     
     .images_acc #img_g{
         width: 80%;
         float: left;
         margin-left: -10%;
+        margin-top: -10px;
         animation: image_g_intro 1s ease forwards;
     }
     .images_acc #img_d{
         width: 60%;
         float: right;
         margin-right: -10%;
-        margin-top: -50px;
+        margin-top: -100px;
         animation: image_d_intro 1s ease forwards;
     }
     .slider{
@@ -311,7 +388,7 @@ nav a:hover{
         background-color: var(--vert-fonce);
         text-align: start;
         padding: 10px;
-        margin-top: 500px;
+        margin-top: 410px;
         overflow: hidden; 
         box-shadow: 0  -10px 400px var(--vert-fonce);
     }
@@ -322,6 +399,41 @@ nav a:hover{
         color: var(--vert-fonce);
         margin-top: 100px;
     }
+    .shop h1{
+        font-size: 40px;
+        color: var(--blanc);
+        z-index: 2;
+    }
+    
+    .shop p{
+        font-size: 30px;
+        color: var(--blanc);
+    }
+    .shop #droite{
+        width: 20%;
+        z-index: -1;
+        float: right;
+        left: 300px;
+        margin-top: 60px;
+        position: absolute;
+        z-index: 1;
+        transition: all .8s ease-in-out;
+    }
+    .shop:hover #droite{
+
+    }
+    .shop #gauche{
+        width: 30%;
+        z-index: -1;
+        float: left;
+        margin-top: 0px;
+        margin-left: -50px;
+        transition: all .8s ease-in-out;
+    }
+    .shop:hover #gauche{
+        
+    }
+    
 
     /*respondsive animation*/
 
