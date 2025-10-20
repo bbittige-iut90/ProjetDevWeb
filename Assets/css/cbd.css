@@ -1,0 +1,157 @@
+/* Style géné  */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #B6EB17 0%, #35BA14 60%, #242424 100%);
+    color: #fff;
+}
+
+/* En-tête  */
+header {
+    background-color: #242424;
+    color: #B6EB17;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #B6EB17;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #B6EB17;
+}
+
+/* Sections boutique  */
+.section-boutique {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/*Titres de section*/
+.titre-section {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    font-weight: 800;
+    text-shadow: 0 0 10px #fff;
+}
+
+.multicolore {
+    background: linear-gradient(90deg, #B6EB17, #35BA14, gold, #B6EB17);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: arcenciel 5s infinite linear;
+}
+
+@keyframes arcenciel {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+/* Grille de produits */
+.grille-produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Produits */
+.produit {
+    background: #FFFFFF;
+    color: #242424;
+    border-radius: 15px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* Images */
+.produit img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nom et prix */
+.nom-produit {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.prix-produit {
+    color: #35BA14;
+    font-weight: 700;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+/* Bouton panier */
+.bouton-panier {
+    margin-top: 10px;
+    background: linear-gradient(90deg, #35BA14, #B6EB17);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #242424;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.bouton-panier:hover {
+    background: linear-gradient(90deg, #B6EB17, #35BA14);
+    transform: scale(1.05);
+}
+
+/* === Produits phares === */
+.produit-phare {
+    border: 2px solid gold;
+    box-shadow: 0 0 15px gold;
+}
+
+/* === Section célèbres === */
+#celebres .produit {
+    background: linear-gradient(135deg, #fffbe7, #fff);
+    border: 2px solid gold;
+}
+
+#celebres .titre-section {
+    color: gold;
+    text-shadow: 0 0 15px gold;
+}
+
+/*  */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5em;
+    }
+
+    .titre-section {
+        font-size: 1.8em;
+    }
+
+    .grille-produits {
+        grid-template-columns: 1fr;
+    }
+}
