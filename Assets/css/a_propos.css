@@ -1,1 +1,138 @@
+.bbh-sans-bartle-regular {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+/* ==================== BODY ==================== */
+body{
+    --white: #ffffff;
+    --black: #000000;
+    --green: #B6EB17;
+    --darkgreen: #35BA14;
+    --anthracite: #242424;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:var(--anthracite);
+}
+
+/* ==================== HEADER ==================== */
+header {
+    position: fixed;
+    display: flex;
+
+    top:10px;
+
+    background-color: var(--white);
+    border-radius:50px;
+    border: solid 1px gray; 
+    z-index:100;
+
+    animation: anim-header 1s;
+
+
+}
+
+header a {
+    display:flex;
+
+    margin:20px;
+    gap:20px;
+
+    text-decoration:none;
+    color:var(--black);
+}
+
+#formulaire {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  #formulaire h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  #formulaire p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+  }
+
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #0078ff;
+    box-shadow: 0 0 5px rgba(0,120,255,0.3);
+  }
+
+  button {
+    align-self: flex-end;
+    background-color: #0078ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #005fd1;
+  }
+
+/* ==================== ANIMATIONS ==================== */
+/* ===== HEADER ===== */
+@keyframes anim-header {
+    0% { 
+        transform: translateY(-100%);
+    }
+    25% {
+        transform:rotateZ(15deg);
+    }
+    45% {
+        transform:rotateZ(-15deg);
+    }
+    65% {
+        transform:rotateX(90deg);
+    }
+    85% {
+        transform: translateY(50%);
+        transform:scale(1.5);
+    }
+}
