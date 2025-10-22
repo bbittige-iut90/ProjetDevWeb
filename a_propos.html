@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>à propos - Zenix</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Assets/css/a_propos.css">
+    <!-- FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- header temporaire-->
     <header>
-        <a href="index.html">Accueil</a>
-        <a href="boutique.html">Boutique</a>
-        <a href="panier.html">Panier</a>
-        <a href="a_propos.html">A propos</a>
+        <a href="index.html" class="bbh-sans-bartle-regular">Accueil</a>
+        <a href="boutique.html" class="bbh-sans-bartle-regular">Boutique</a>
+        <a href="panier.html" class="bbh-sans-bartle-regular">Panier</a>
+        <a href="a_propos.html" class="bbh-sans-bartle-regular">A propos</a>
     </header>
+
+    <section id="formulaire">
+  <h2>À propos</h2>
+  <p>
+    Bienvenue sur notre site ! Nous sommes passionnés par notre travail et toujours à l’écoute.  
+    Si vous avez des questions, des suggestions ou souhaitez simplement nous contacter, utilisez le formulaire ci-dessous.
+  </p>
+
+  <form id="contact-form" action="#" method="post">
+    <h3>Contactez-nous</h3>
+
+    <div class="form-group">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sujet">Sujet :</label>
+      <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+    </div>
+
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
 
 </body>
 </html>
