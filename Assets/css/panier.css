@@ -7,6 +7,7 @@
 /* = swiper = https://www.youtube.com/shorts/0dXyetSW-Ro = */
 /* = blur = https://www.youtube.com/shorts/iiuwRIyXMxk = */
 /* = animation card = https://www.youtube.com/shorts/p3zK1G-K7AA = */
+/* = typewriter = https://www.youtube.com/shorts/fTOcWMD_5pk = */
 
 
 /* ==================== FONT ==================== */
@@ -76,10 +77,16 @@ h1 {
     animation: anim-h1 2.5s linear infinite;
 }
 
-h2 {
+.typewriter {
     display:flex;
-    flex-direction:column;
+    justify-content:center;
     padding-top:100px;
+}
+.typewriter p {
+    font-size:1.5rem;
+    margin-inline:auto;
+    overflow:hidden;
+    white-space: nowrap;
 
     background: linear-gradient(270deg, var(--green), var(--darkgreen),var(--green));
     background-size:200%;
@@ -88,7 +95,8 @@ h2 {
     -webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
 
-    animation: anim-h1 2.5s linear infinite;
+
+    animation: typing 1s steps(22) forwards;
 }
 
 /* ==================== CARD ==================== */
@@ -115,6 +123,7 @@ section {
     overflow:hidden;
     border-radius:20px;
 }
+
 .card-p::before,
 .card-i::before {
     position:absolute;
@@ -127,6 +136,7 @@ section {
 
     animation: anim-pair 3s linear infinite;
 }
+
 .card-i::before {
     animation:anim-impair 2.5s linear infinite;
 }
@@ -146,6 +156,7 @@ section {
 .card-i h3 {
     position: absolute;
     text-align: center;
+
     color: var(--white);
     font-size: 2em;
     z-index:1;
@@ -204,6 +215,16 @@ section {
 @keyframes anim-h1 {
     100% {
         background-position: 200%;
+    }
+}
+
+/* ===== TEXTE ===== */
+@keyframes typing {
+    from {
+        width:0;
+    }
+    to {
+        width:100%;
     }
 }
 
