@@ -322,22 +322,86 @@ nav a:hover{
 }
 .spe{
     height: 700px;
-    background-color: var(--vert-jaune);
-    box-shadow: 0 0 30px var(--noir), inset  0 20px  30px var(--noir);
+    background: linear-gradient(to bottom, 
+    var(--noir),
+    var(--vert-jaune),
+    var(--vert-jaune),
+    var(--vert-jaune),
+    var(--vert-jaune),
+    var(--noir));
+    box-shadow: 0 0 30px var(--noir);
     align-items: center;
     justify-content: center;
     display: flex;
+    border-top: 1px solid var(--blanc);
+    border-bottom: 1px solid var(--blanc);
+}
+.spe h1{
+    padding-left: 20px;
+    font-size: 70px;
+    margin: 0;
+    position: absolute;
+    color: var(--blanc);
+}
+.box_spe:hover #pop1{
+    width: 20%;
+    transform: translateX(370px) translateY(-180px) rotateZ(20deg);
+    opacity: 1;
+}
+.box_spe:hover #pop2{
+    width: 20%;
+    opacity: 1;
+    transform: translateX(-370px) translateY(-180px) rotateZ(-20deg);
+}
+.box_spe:hover #pop3{
+    width: 20%;
+    opacity: 1;
+    transform: translateX(370px) translateY(180px) rotateZ(20deg);
+}
+.box_spe:hover #pop4{
+    width: 20%;
+    opacity: 1;
+    transform: translateX(-370px) translateY(180px) rotateZ(-20deg);
 }
 .box_spe{
     height: 50%;
     width: 50%;
-    background-color: var(--noir);
     align-items: center;
     justify-content: center;
     display: flex;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.box_spe img{
+    width: 5%;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    z-index: 2;
+    opacity: 0;
 }
 .box_spe #box_royale{
     width: 30%;
+    opacity: 0.7;
+}
+.box_spe:hover #box_royale{
+    transform: rotateZ(-8deg);
+    opacity: 1;
+    filter: brightness(1.5);
+}
+.box_spe #fond_mb{
+    width: 45%;
+    opacity: 1;
+    box-shadow: 0 0 30px var(--noir);
+    border-radius: 10px;
+}
+.box_spe:hover #fond_mb{
+    width: 46%;
+}
+header video{
+    width: 100%;
+    position: absolute;
+    top:-50px;
 }
 
 footer{
@@ -474,7 +538,48 @@ footer h1{
     .type_produit a h1:hover{
         padding-top: 0;
     }
+    .spe{
+        height: 900px;
+        background: linear-gradient(to bottom, 
+        var(--noir),
+        var(--vert-jaune),
+        var(--vert-jaune),
+        var(--vert-jaune),
+        var(--vert-jaune),
+        var(--noir));
+        box-shadow: 0 0 30px var(--noir);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-top: 1px solid var(--blanc);
+        border-bottom: 1px solid var(--blanc);
+    }
+    .spe h1{
+        padding-left: 20px;
+        font-size: 90px;
+        margin: 0;
+        position: absolute;
+        color: var(--blanc);
+    }
+    .box_spe #fond_mb{
+        width: 40%;
+        opacity: 1;
+        box-shadow: 0 0 30px var(--noir);
+    }
+    .box_spe:hover #fond_mb{
+        width: 41%;
+    }
+    header video{
+        width: 100%;
+        position: absolute;
+        top:-100px;
+    }
 }
+
+
+
+
+
 @media (max-width: 767px) {
     header{
         display: flex;
