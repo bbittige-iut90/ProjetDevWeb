@@ -20,40 +20,95 @@
         <a href="panier.html" class="bbh-sans-bartle-regular">Panier</a>
         <a href="a_propos.html" class="bbh-sans-bartle-regular">A propos</a>
     </header>
+    <section class="equipe">
+      <h2>Notre équipe</h2>
+    </section>
+    <section class="card-container">
+      <div class="game-card">
+        <div class="img-wrapper">
+          <img src="Assets/images/utilisateur.png" alt="img_utilisateur">
+        </div>
+        <h3>Noé LAHURTE</h3>
+        <p>Page d'Accueil</p>
+      </div>
+
+      <div class="game-card">
+        <div class="img-wrapper">
+          <img src="Assets/images/utilisateur.png" alt="img_utilisateur">
+        </div>
+        <h3>Yanis ALLALI</h3>
+        <p>Page boutique</p>
+      </div>
+
+      <div class="game-card">
+        <div class="img-wrapper">
+          <img src="Assets/images/utilisateur.png" alt="img_utilisateur">
+        </div>
+        <h3>Bryan BITTIGER</h3>
+        <p>Page panier</p>
+      </div>
+
+      <div class="game-card">
+        <div class="img-wrapper">
+          <img src="Assets/images/utilisateur.png" alt="img_utilisateur">
+        </div>
+        <h3>Baptiste AUBRY</h3>
+        <p>Page à propos</p>
+      </div>
+    </section>
+  </section>
 
     <section id="formulaire">
-  <h2>À propos</h2>
-  <p>
-    Bienvenue sur notre site ! Nous sommes passionnés par notre travail et toujours à l’écoute.  
-    Si vous avez des questions, des suggestions ou souhaitez simplement nous contacter, utilisez le formulaire ci-dessous.
-  </p>
+      <h2>Formulaire</h2>
+        <p>
+          Bonjour nous sommes toujours à l’écoute.  
+          Si vous avez des questions, des suggestions ou souhaitez simplement nous contacter, utilisez le formulaire ci-dessous.
+        </p>
 
-  <form id="contact-form" action="#" method="post">
-    <h3>Contactez-nous</h3>
+      <form id="contact-form" action="#" method="post" href="#formulaire">
+        <h3>Contactez-nous</h3>
 
-    <div class="form-group">
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+      <div class="ligne">
+        <div class="Nom">
+          <label for="nom">Nom :</label><br>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+        </div>
+
+        <div class="Prenom">
+          <label for="nom">Prénom :</label><br>
+          <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+        </div>
+      </div>
+
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="sujet">Sujet :</label>
+          <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        </div>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <footer>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a> |
+      <a href="#">À propos</a> |
+      <a href="#">Contact</a>
     </div>
-
-    <div class="form-group">
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" placeholder="Votre email" required>
+    <div class="copyright">
+      © 2025 MonSite. Tous droits réservés.
     </div>
-
-    <div class="form-group">
-      <label for="sujet">Sujet :</label>
-      <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message" required>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-    </div>
-
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
+  </footer>
 
 </body>
 </html>
