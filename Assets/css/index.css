@@ -270,6 +270,86 @@ nav a:hover{
     border-radius: inherit;
     background-color: transparent;
 }
+
+.type_produit hr{
+    margin-top: -500px;
+    left: 800px;
+    border: 1px solid var(--blanc);
+    color: var(--blanc);
+    z-index: 4;
+    position: absolute;
+    opacity: 0;
+    transition: all .4s ease;
+}
+a[href="boutique.html#bonbons"]:hover ~ #t1{
+    width :100px;
+    top: 2531px;
+    right: 0;
+    left: 250px;
+    opacity: 1;
+}
+a[href="boutique.html#bonbons"]:hover ~ #t2{
+    width :100px;
+    top: 2567px;
+    right: 0;
+    left: 756px;
+    margin-left: 0;
+    opacity: 1;
+    transform: rotateZ(-45deg);
+}
+
+a[href="boutique.html#huiles"]:hover ~ #t1{
+    width :150px;
+    top: 2631px;
+    left: 182px;
+    right: 0;
+
+    opacity: 1;
+}
+a[href="boutique.html#huiles"]:hover ~ #t2{
+    width :30px;
+    top: 2620px;
+    right: 0;
+    left: 756px;
+    margin-left: 0;
+    opacity: 1;
+    transform: rotateZ(45deg);
+}
+a[href="boutique.html#plantes"]:hover ~ #t1{
+    width :100px;
+    top: 2645px;
+    left: 197px;
+    right: 0;
+
+    opacity: 1;
+}
+a[href="boutique.html#plantes"]:hover ~ #t2{
+    width :70px;
+    top: 2620px;
+    right: 0;
+    left: 756px;
+    margin-left: 0;
+    opacity: 1;
+    transform: rotateZ(45deg);
+}
+a[href="boutique.html#box"]:hover ~ #t1{
+    width :50px;
+    top: 2723px;
+    left: 285px;
+    right: 0;
+
+    opacity: 1;
+}
+a[href="boutique.html#box"]:hover ~ #t2{
+    width :150px;
+    top: 2670px;
+    right: 0;
+    left: 756px;
+    margin-left: 0;
+    opacity: 1;
+    transform: rotateZ(45deg);
+}
+
 .type_produit a h1{
     padding-left: 10px;
     position: absolute;
@@ -279,7 +359,7 @@ nav a:hover{
     color: var(--noir);
     opacity: 0.9;
     backdrop-filter: blur(100px);
-    font-size: 65px;
+    font-size: 55px;
 }
 .type_produit a h1:hover::after{
     content: '\1809';
@@ -296,10 +376,10 @@ nav a:hover{
 .type_produit a p{
     position: absolute;
     padding: 5px;
-    width: 30%;
-    margin-top: -500px;
-    left: 900px;
-    font-size: 35px;
+    width: 25%;
+    margin-top: calc(-500px + (var(--position) * 60px));
+    left: 950px;
+    font-size: 22px;
     opacity: 0;
     transition: all .4s ease;
 }
@@ -408,7 +488,7 @@ footer{
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     text-align: center;
-    font-size: 30px;
+
     height: 600px;
     box-shadow: 0 0 30px var(--noir), inset 0 0 30px var(--noir);
     background-color: var(--noir);
@@ -417,7 +497,14 @@ footer{
 }
 
 footer h1{
+    margin-top: 50px;
     color: var(--blanc);
+    font-size: 35px;
+}
+footer .partie2{
+    background-color: var(--blanc);
+    width: 100%;
+    height: 200px;
 }
 
 /*animation*/
@@ -523,10 +610,10 @@ footer h1{
     .type_produit a p{
     position: absolute;
     padding: 5px;
-    width: 30%;
-    margin-top: -650px;
-    left: 1100px;
-    font-size: 40px;
+    width: 25%;
+    margin-top: calc(-650px + (var(--position) * 60px));
+    left: 1200px;
+    font-size: 25px;
     opacity: 0;
     transition: all .4s ease;
     }
@@ -566,6 +653,72 @@ footer h1{
         width: 100%;
         position: absolute;
         top:-100px;
+    }
+
+    a[href="boutique.html#bonbons"]:hover ~ #t1{
+    width :100px;
+    top: 2646px;
+    right: 0;
+    left: 340px;
+    opacity: 1;
+    }
+    a[href="boutique.html#bonbons"]:hover ~ #t2{
+        width :150px;
+        top: 2700px;
+        right: 0;
+        left: 950px;
+        margin-left: 0;
+        opacity: 1;
+        transform: rotateZ(-45deg);
+    }
+
+    a[href="boutique.html#huiles"]:hover ~ #t1{
+        width :150px;
+        top: 2718px;
+        left: 255px;
+        right: 0;
+        opacity: 1;
+    }
+    a[href="boutique.html#huiles"]:hover ~ #t2{
+        width :60px;
+        top: 2740px;
+        right: 0;
+        left: 960px;
+        margin-left: 0;
+        opacity: 1;
+        transform: rotateZ(-45deg);
+    }
+    a[href="boutique.html#plantes"]:hover ~ #t1{
+        width :200px;
+        top: 2750px;
+        left: 245px;
+        right: 0;
+        opacity: 1;
+    }
+    a[href="boutique.html#plantes"]:hover ~ #t2{
+        width :70px;
+        top: 2620px;
+        right: 0;
+        left: 756px;
+        margin-left: 0;
+        opacity: 0;
+        transform: rotateZ(45deg);
+    }
+    a[href="boutique.html#box"]:hover ~ #t1{
+        width :130px;
+        top: 2840px;
+        left: 302px;
+        right: 0;
+        opacity: 1;
+    }
+    a[href="boutique.html#box"]:hover ~ #t2{
+        width :110px;
+        top: 2800px;
+        right: 0;
+        left: 950px;
+        margin-left: 0;
+        opacity: 1;
+        transform: rotateZ(45deg);
     }
 }
 
@@ -748,6 +901,9 @@ footer h1{
     
     .shop video{
         border-radius: 30px;
+    }
+    a:hover ~ #t1, a:hover ~ #t2{
+        opacity: 0;
     }
 
     /*respondsive animation*/
