@@ -6,10 +6,11 @@
 
 /* ==================== BODY ==================== */
 body{
-    --white: #ffffff;
-    --black: #000000;
-    --green: #B6EB17;
-    --darkgreen: #35BA14;
+    --blanc: #ffffff;
+    --noir: #000000;
+    --jaune_vert: #B6EB17;
+    --vert: #ADFF2F;
+    --vert_foncé: #35BA14;
     --anthracite: #242424;
 
     margin: 0;
@@ -18,7 +19,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background:var(--anthracite);
+    background: var(--anthracite);
 }
 
 /* ==================== HEADER ==================== */
@@ -28,7 +29,7 @@ header {
 
     top:10px;
 
-    background-color: var(--white);
+    background-color: var(--blanc);
     border-radius:50px;
     border: solid 1px gray; 
     z-index:100;
@@ -45,28 +46,81 @@ header a {
     gap:20px;
 
     text-decoration:none;
-    color:var(--black);
+    color:var(--noir);
+}
+
+#a_propos {
+  margin-top: 100px;
+}
+
+.equipe {
+  margin-top: 100px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: flex-start;
+}
+
+.game-card {
+  background-color: var(--vert_foncé);
+  border-radius: 6px;
+  box-shadow: 4px 5px 4px var(--jaune_vert);
+  width: 225px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: mouvement;
+  animation-duration: 2s;
+}
+
+.game-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.game-card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  color: var(--blanc);
+}
+
+.game-card p {
+  font-size: 14px;
+  color: var(--blanc);
+  margin: 0 0 10px;
+}
+
+.stats {
+  font-size: 14px;
+  color: #555;
 }
 
 #formulaire {
     max-width: 700px;
     margin: 50px auto;
+    margin-top: 100px;
     padding: 20px;
-    background: #fafafa;
-    border-radius: 15px;
+    background: var(--vert);
+    border-radius: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-family: "Segoe UI", sans-serif;
   }
 
   #formulaire h2 {
     text-align: center;
-    color: #333;
+    color: var(--noir);
     margin-bottom: 10px;
   }
 
   #formulaire p {
     text-align: center;
-    color: #555;
+    color: var(--anthracite);
     margin-bottom: 30px;
   }
 
@@ -74,6 +128,28 @@ header a {
     display: flex;
     flex-direction: column;
     gap: 15px;
+  }
+
+  .ligne {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .Nom {
+    width: 50%;
+  }
+
+  #nom {
+    width: 90%;
+  }
+
+  .Prenom {
+    width: 50%;
+  }
+
+  #prenom {
+    width: 90%;
   }
 
   .form-group {
@@ -89,21 +165,21 @@ header a {
 
   input, textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 5px solid var(--vert_foncé);
     border-radius: 8px;
     font-size: 1em;
   }
 
   input:focus, textarea:focus {
     outline: none;
-    border-color: #0078ff;
-    box-shadow: 0 0 5px rgba(0,120,255,0.3);
+    border-color: var(--vert);
+    box-shadow: 0 0 5px var(--vert_foncé);
   }
 
   button {
     align-self: flex-end;
-    background-color: #0078ff;
-    color: white;
+    background-color: var(--vert_foncé);
+    color: blanc;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -113,7 +189,46 @@ header a {
   }
 
   button:hover {
-    background-color: #005fd1;
+    background-color: var(--vert);
+  }
+
+  footer {
+    width: 100%;
+    background-color: #ADFF2F;
+    color: #000;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  footer a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .footer-links {
+      margin-bottom: 15px;
+    }
+
+  .footer-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 16px;
+    background: var(--jaune_vert);
+    color: var(--blanc);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+
+  .footer-links a:hover {
+      background: var(--vert_foncé);
+      transform: scale(1.05);
+    }
+
+  .copyright {
+    font-size: 0.9em;
   }
 
 /* ==================== ANIMATIONS ==================== */
@@ -135,4 +250,11 @@ header a {
         transform: translateY(50%);
         transform:scale(1.5);
     }
+}
+ 
+@keyframes mouvement {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
 }
