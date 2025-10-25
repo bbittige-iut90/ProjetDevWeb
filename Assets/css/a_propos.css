@@ -22,6 +22,32 @@ body{
     background: var(--anthracite);
 }
 
+h2 {
+  font-size: 50px;
+  text-align: center;
+  color: var(--jaune_vert);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(182, 235, 23, 0.6);
+  position: relative;
+  animation-name: titre_h2;
+  animation-duration: 4s;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--vert_foncé);
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+
 /* ==================== HEADER ==================== */
 header {
     position: fixed;
@@ -49,25 +75,69 @@ header a {
     color:var(--noir);
 }
 
-#a_propos {
-  margin-top: 100px;
+.infos {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
 }
 
+/* Style de base pour tous les paragraphes */
+.infos > div {
+  width: 50%;
+  background-color: var(--vert_foncé);
+  border-radius: 30px;
+  padding: 20px;
+  color: var(--blanc);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Paragraphes impairs → à gauche */
+.infos > .impaire {
+  align-self: flex-start;
+  margin-left: 100px;
+  animation-name: mouv_impaire;
+  animation-duration: 1s;
+  box-shadow: 0 0 20px rgba(173, 255, 47, 0.4);
+}
+
+/* Paragraphes pairs → à droite */
+.infos > .pair {
+  align-self: flex-end;
+  margin-right: 100px;
+  animation-name: mouv_pair;
+  animation-duration: 1s;
+  box-shadow: 0 0 20px rgba(173, 255, 47, 0.4);
+}
+
+
+/* Petit effet au survol */
+.infos > div:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(173, 255, 47, 0.5);
+}
+
+
 .equipe {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+  margin-top: 70px;
   justify-content: flex-start;
 }
 
 .game-card {
+  position: relative;
   background-color: var(--vert_foncé);
   border-radius: 6px;
-  box-shadow: 4px 5px 4px var(--jaune_vert);
+  box-shadow: 0 0 20px rgba(173, 255, 47, 0.5);
   width: 225px;
   padding: 10px;
   display: flex;
@@ -75,10 +145,100 @@ header a {
   align-items: center;
   text-align: center;
   animation: mouvement;
-  animation-duration: 2s;
+  animation-duration: 1s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(173, 255, 47, 1);
+}
+
+.game-card1 {
+  position: relative;
+  background-color: var(--vert_foncé);
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(173, 255, 47, 0.5);
+  width: 225px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: mouvement1;
+  animation-duration: 1s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(173, 255, 47, 1);
+}
+
+.game-card2 {
+  position: relative;
+  background-color: var(--vert_foncé);
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(173, 255, 47, 0.5);
+  width: 225px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: mouvement2;
+  animation-duration: 1s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(173, 255, 47, 1);
+}
+
+.game-card3 {
+  position: relative;
+  background-color: var(--vert_foncé);
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(173, 255, 47, 0.5);
+  width: 225px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: mouvement3;
+  animation-duration: 1s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card3:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(173, 255, 47, 1);
 }
 
 .game-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.game-card1 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.game-card2 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.game-card3 img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -91,15 +251,46 @@ header a {
   color: var(--blanc);
 }
 
+.game-card1 h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  color: var(--blanc);
+}
+
+.game-card2 h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  color: var(--blanc);
+}
+
+.game-card3 h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  color: var(--blanc);
+}
+
 .game-card p {
   font-size: 14px;
   color: var(--blanc);
   margin: 0 0 10px;
 }
 
-.stats {
+.game-card1 p {
   font-size: 14px;
-  color: #555;
+  color: var(--blanc);
+  margin: 0 0 10px;
+}
+
+.game-card2 p {
+  font-size: 14px;
+  color: var(--blanc);
+  margin: 0 0 10px;
+}
+
+.game-card3 p {
+  font-size: 14px;
+  color: var(--blanc);
+  margin: 0 0 10px;
 }
 
 #formulaire {
@@ -107,9 +298,9 @@ header a {
     margin: 50px auto;
     margin-top: 100px;
     padding: 20px;
-    background: var(--vert);
+    background: var(--vert_foncé);
     border-radius: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 0 30px rgba(173, 255, 47, 0.7);
   }
 
   #formulaire h2 {
@@ -165,31 +356,29 @@ header a {
 
   input, textarea {
     padding: 10px;
-    border: 5px solid var(--vert_foncé);
+    border: 5px solid var(--vert);
     border-radius: 8px;
     font-size: 1em;
   }
 
   input:focus, textarea:focus {
     outline: none;
-    border-color: var(--vert);
-    box-shadow: 0 0 5px var(--vert_foncé);
+    border-color: var(--jaune_vert);
+    box-shadow: 0 0 5px var(--vert);
   }
 
   button {
-    align-self: flex-end;
-    background-color: var(--vert_foncé);
+    align-self: center;
+    background-color: var(--vert);
     color: blanc;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
+    font-size: 20px;
   }
 
   button:hover {
-    background-color: var(--vert);
+    background-color: var(--jaune_vert);
   }
 
   footer {
@@ -251,10 +440,52 @@ header a {
         transform:scale(1.5);
     }
 }
- 
+/* ===== EQUIPE ===== */
 @keyframes mouvement {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-30%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes mouvement1 {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateY(30%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes mouvement2 {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateY(-30%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes mouvement3 {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(30%); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== Paragraphes ===== */
+@keyframes mouv_impaire {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(60%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes mouv_pair {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-60%); }
+  100% { transform: translateX(0); }
+}
+
+
+@keyframes titre_h2 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
