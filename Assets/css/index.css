@@ -453,6 +453,16 @@ a[href="boutique.html#box"]:hover ~ #t2{
     border-radius: 20px;
     background-color: transparent;
 }
+.box_spe a{
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: transparent;
+}
 .box_spe img{
     width: 5%;
     position: absolute;
@@ -1085,7 +1095,7 @@ footer{
         width: 40%;
         float: right;
         margin-right: -10%;
-        margin-top: -100px;
+        margin-top: 60px;
         animation: image_d_intro 1s ease forwards;
     }
     .slider{
@@ -1101,8 +1111,11 @@ footer{
 
     .slider .liste h1 {
         font-size: 40px;
-        animation: defilement 10s linear infinite;
-        animation-delay: calc(var(--position) * 5s);
+        animation: defilement_res 3s linear infinite;
+        animation-delay: calc(var(--position) * 1.5s);
+    }
+    .slider .liste h1[style="--position: 2"]{
+        opacity: 0;
     }
     .intro{
         height: 200px;
@@ -1215,6 +1228,7 @@ footer{
     .box_spe #pop4 {
         animation: auto_hover_img_box_4 4s ease infinite;
     }
+
     footer {
         padding: 25px 5% 0;
         border-top-left-radius: 20px;
@@ -1373,6 +1387,14 @@ footer{
             opacity: 0;
             transform: translateX(0) translateY(0) rotateZ(0deg);
         }
+    }
+    @keyframes defilement_res {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
     }
 }
 
