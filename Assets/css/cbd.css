@@ -226,6 +226,49 @@ nav a:hover {
     color: gold;
     text-shadow: 0 0 15px gold;
 }
+/* foot  */
+footer{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: center;
+    height: 600px;
+    box-shadow: 0 0 30px var(--noir), inset 0 0 30px var(--noir);
+    background-color: var(--noir);
+    backdrop-filter: blur(300px);
+    border-top: 3px solid var(--noir);
+}
+
+footer h1{
+    margin-top: 50px;
+    color: var(--blanc);
+    font-size: 115px;
+}
+footer .partie2{
+    background-color: var(--blanc);
+    width: 100%;
+    height: 200px;
+}
+footer .pages {  
+    color: var(--blanc);
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    margin-left: 300px;
+}
+footer .pages .boutique h2{
+    text-align: center;
+    width: 20%;
+}
+footer .pages .boutique h3{
+    opacity: 0;
+        transition: all .4s ease;
+}
+footer .pages .boutique:hover h3{
+    opacity: 1;
+}
+
 
 /* Responsive */
 @media (max-width: 600px) {
@@ -253,3 +296,4 @@ nav a:hover {
         display: none;
     }
 }
+
