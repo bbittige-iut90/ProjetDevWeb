@@ -1,3 +1,4 @@
+
 /* ==================== TUTOS ==================== */
 /* = transform = https://www.youtube.com/shorts/U8XtSxfaQQw = */
 /* = hover = https://www.youtube.com/shorts/VjevO_0quKM = */
@@ -227,11 +228,30 @@ form select {
     background:linear-gradient(180deg, var(--green), var(--darkgreen),var(--green));;
     border-radius: 20px;
     border:none;
+    margin-bottom:5px;
 }
 
 section a {
     text-decoration:none;
     color:#262624;
+}
+/* ==================== FOOTER ==================== */
+footer {
+    display:flex;
+    flex-direction : column;
+    text-align:center;
+    width:100%;
+    background-color:#262624;
+    border-top:1px solid 
+}
+
+footer h2 {
+    padding: 0;
+}
+
+footer a {
+    text-decoration:none;
+    color:var(--black);
 }
 
 
