@@ -49,7 +49,7 @@ body{
 }
 
 /* ==================== HEADER ==================== */
-header {
+header{
     position: fixed;
     display: flex;
 
@@ -285,7 +285,7 @@ section a {
     }
 
     body {
-        padding-top: 200px;
+        padding-top: 70px;
         margin: 0;
     }
 
@@ -294,7 +294,12 @@ section a {
         flex-direction: column;
         width: 100%;
         margin-top: -10px;
+        gap:0;
         border-radius: 0;
+    }
+
+    header a {
+        margin:10px;
     }
 
     section {
