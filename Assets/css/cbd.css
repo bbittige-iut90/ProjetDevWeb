@@ -227,21 +227,8 @@ nav a:hover {
     text-shadow: 0 0 15px gold;
 }
 /* Section célèbres */
-/* --- Séparation entre le contenu et le footer --- */
-footer {
-    background-color: #1b1b1b; /* un peu plus foncé que #242424 pour bien marquer la différence */
-    color: white;
-    padding: 60px 20px;
-    margin-top: 60px;
-    border-top: 3px solid #00ff9d; /* fine barre flashy pour démarquer la fin */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-}
 
-
-/*  footer  */
+/*  foot */
 footer {
     background-color: #1b1b1b; 
     color: white;
@@ -254,7 +241,6 @@ footer {
     gap: 50px;
 }
 
-/* --- Partie ZENIX --- */
 footer .partie1 h1 {
     font-size: 3.5rem; 
     text-transform: uppercase;
@@ -354,3 +340,4 @@ footer .boutique h3:hover {
         display: none;
     }
 }
+
