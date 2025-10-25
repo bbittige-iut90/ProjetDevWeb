@@ -226,51 +226,109 @@ nav a:hover {
     color: gold;
     text-shadow: 0 0 15px gold;
 }
-/* foot  */
-footer{
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    text-align: center;
-    height: 600px;
-    box-shadow: 0 0 30px var(--noir), inset 0 0 30px var(--noir);
-    background-color: var(--noir);
-    backdrop-filter: blur(300px);
-    border-top: 3px solid var(--noir);
-}
-
-footer h1{
-    margin-top: 50px;
-    color: var(--blanc);
-    font-size: 115px;
-}
-footer .partie2{
-    background-color: var(--blanc);
-    width: 100%;
-    height: 200px;
-}
-footer .pages {  
-    color: var(--blanc);
-    flex-direction: row;
-    text-align: center;
-    width: 100%;
+/* Section célèbres */
+/* --- Séparation entre le contenu et le footer --- */
+footer {
+    background-color: #1b1b1b; /* un peu plus foncé que #242424 pour bien marquer la différence */
+    color: white;
+    padding: 60px 20px;
+    margin-top: 60px;
+    border-top: 3px solid #00ff9d; /* fine barre flashy pour démarquer la fin */
     display: flex;
-    gap: 10%;
-    margin-left: 300px;
-}
-footer .pages .boutique h2{
-    text-align: center;
-    width: 20%;
-}
-footer .pages .boutique h3{
-    opacity: 0;
-        transition: all .4s ease;
-}
-footer .pages .boutique:hover h3{
-    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
 }
 
 
-/* Responsive */
+/*  footer  */
+footer {
+    background-color: #1b1b1b; 
+    color: white;
+    padding: 60px 20px;
+    margin-top: 60px;
+    border-top: 3px solid #00ff9d; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* --- Partie ZENIX --- */
+footer .partie1 h1 {
+    font-size: 3.5rem; 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white; 
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+
+footer .pages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    text-align: left;
+}
+
+
+footer .boutique {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+footer .boutique h2 {
+    font-size: 1.5rem;
+    color: white; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+footer .boutique h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #ccc;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+footer .boutique h3:hover {
+    color: #00ff9d;
+    transform: translateX(5px);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 10px;
+        gap: 30px;
+    }
+
+    footer .partie1 h1 {
+        font-size: 2.5rem;
+    }
+
+    footer .pages {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    footer .boutique h2 {
+        text-align: center;
+    }
+
+    footer .boutique h3 {
+        text-align: center;
+    }
+}
+
+
 @media (max-width: 600px) {
     .texte-destockage {
         font-size: 1.2em;
@@ -296,4 +354,3 @@ footer .pages .boutique:hover h3{
         display: none;
     }
 }
-
