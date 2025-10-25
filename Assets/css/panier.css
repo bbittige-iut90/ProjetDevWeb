@@ -191,6 +191,24 @@ section {
 }
 
 /* ==================== PAYER ==================== */
+form h2 {
+    margin:0;
+}
+
+.payer form{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+}
+
+form select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+}
+
+
 .payer {
     display:flex;
     flex-direction:column;
@@ -201,7 +219,9 @@ section {
 .bouton {
     display:flex;
     flex-direction:column;
+    text-align:center;
     padding:20px;
+    
     font-family: "BBH Sans Bartle", sans-serif;
 
     background:linear-gradient(180deg, var(--green), var(--darkgreen),var(--green));;
