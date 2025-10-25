@@ -7,11 +7,45 @@ body {
 }
 
 /*  nav commune */
+#eclairage_g{
+    background-color: var(--blanc);
+    background-size: 600% 600%;
+    height: 94.7px;
+    filter: blur(200px);
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    float: left;
+    animation: intro_eclairage 1s ease forwards;
+}
+#eclairage_d{
+    background-color: var(--blanc);
+    background-size: 600% 600%;
+    height: 94.7px;
+    filter: blur(200px);
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 0;
+    animation: intro_eclairage 1s ease forwards;
+}
+
+#logo{
+    margin-top: 37px;
+    margin-left: 30px;
+    border-radius: 50%;
+    position: absolute;
+    width: 5%;
+    float: left;
+}
 header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 nav {
     z-index: 5;
@@ -340,4 +374,5 @@ footer .boutique h3:hover {
         display: none;
     }
 }
+
 
