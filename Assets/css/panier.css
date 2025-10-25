@@ -19,7 +19,6 @@
 
 .exo-2 {
   font-family: "Exo 2", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -62,8 +61,6 @@ header {
     z-index:100;
 
     animation: anim-header 1s;
-
-
 }
 
 header a {
@@ -80,7 +77,7 @@ header a {
 h1,h2 {
     display:flex;
     flex-direction:column;
-    padding-top:100px;
+    padding-top:75px;
 
     background: linear-gradient(270deg, var(--green), var(--darkgreen),var(--green));
     background-size:200%;
@@ -97,6 +94,7 @@ h1,h2 {
     justify-content:center;
     padding-top:1%;
 }
+
 .typewriter p {
     font-size:1.5rem;
     margin-inline:auto;
@@ -137,6 +135,8 @@ section {
     background:var(--black);
     overflow:hidden;
     border-radius:20px;
+
+    animation: anim-entree 1s linear;
 }
 
 .card-p::before {
@@ -151,17 +151,6 @@ section {
     animation: anim-pair 3s linear infinite;
 }
 
-.card-i::before {
-    position:absolute;
-
-    height:120%;
-    width:70px;
-
-    content:'';
-    background:linear-gradient(180deg, var(--green), var(--darkgreen),var(--green));
-    animation:anim-impair 2.5s linear infinite;
-}
-
 .card-p::after,
 .card-i::after {
     position:absolute;
@@ -171,15 +160,16 @@ section {
 
     inset:5px;
     border-radius:15px;
-
 }
 
 .card-p h3,
 .card-i h3 {
     position: relative;
     text-align: center;
-
+    
+    margin:0;
     color: var(--white);
+  
     font-size: 1em;
     z-index:3;
 }
@@ -194,18 +184,23 @@ section {
     z-index: 1;
 }
 
-
-
 .card-p:hover,
 .card-i:hover {
     transform:rotateY(360deg);
     transition: 2s;
 }
 
-/* ==================== BOUTON ==================== */
+/* ==================== PAYER ==================== */
+.payer {
+    display:flex;
+    flex-direction:column;
+    border:5px solid var(--black);
+    border-radius:10px;
+}
+
 .bouton {
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     padding:20px;
     font-family: "BBH Sans Bartle", sans-serif;
 
@@ -216,7 +211,7 @@ section {
 
 section a {
     text-decoration:none;
-    color:var(--black);
+    color:#262624;
 }
 
 
@@ -227,13 +222,13 @@ section a {
         transform: translateY(-100%);
     }
     25% {
-        transform:rotateZ(15deg);
+        transform:rotateZ(5deg);
     }
     45% {
-        transform:rotateZ(-15deg);
+        transform:rotateZ(-5deg);
     }
     65% {
-        transform:rotateX(90deg);
+        transform:rotateX(45deg);
     }
     85% {
         transform: translateY(50%);
@@ -267,13 +262,108 @@ section a {
         transform: rotate(360deg);
     }
 }
-@keyframes anim-impair {
+
+@keyframes anim-entree {
     from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
+        width:0;
     }
 }
 
 /* ==================== RESPONSIVE ==================== */
+@media (max-width: 775px) {
+    header,
+    .card-p,
+    .card-i,
+    .card-p::before,
+    .card-p::after,
+    .card-i::before,
+    .card-i::after,
+    .card-p:hover,
+    .card-i:hover {
+        animation: none;
+        transform: none;
+    }
+
+    body {
+        padding-top: 200px;
+        margin: 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: -10px;
+        border-radius: 0;
+    }
+
+    section {
+        display: flex;
+        width: 100%;
+        gap: 0;
+    }
+
+    .card-p,
+    .card-i {
+        width: 50%;
+        gap: 0;
+    }
+
+    .card-p::before {
+        background:none;
+    }
+
+    .card-p img,
+    .card-i img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        border-radius: 0;
+        z-index: 1;
+    }
+
+    .card-p::after,
+    .card-i::after {
+        position: absolute;
+        inset: 5px;
+        border-radius: 15px;
+        background: transparent;
+        z-index: 2; 
+    }
+
+    .card-p:hover::after,
+    .card-i:hover::after {
+        margin:0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .card-p h3,
+    .card-i h3 {
+        position: absolute;
+        left: 6px;
+        right: 6px;
+        bottom: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        color: var(--white);
+        font-size: 20px;
+        visibility: hidden;
+        z-index: 3;
+    }
+
+    .card-p:hover h3,
+    .card-i:hover h3 {
+        visibility: visible;
+    }
+
+    .boutons {
+        display:flex;
+        flex-direction:column;;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
