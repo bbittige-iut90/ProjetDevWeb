@@ -90,6 +90,41 @@ nav a:hover{
     animation: anime_titre 2s ease forwards;
     scale: 1.05;
 }
+/*  nav respon */
+@media (max-width: 600px) {
+
+    nav {
+        width: 85%;
+        height: auto;
+        gap: 20px;
+        flex-direction: column; /* Les liens passent en colonne */
+        top: 3%;
+        border-radius: 25px;
+        padding: 10px 0;
+    }
+
+    header nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    #logo {
+        width: 15%;
+        margin-top: 20px;
+        margin-left: 0;
+        position: relative;
+    }
+
+    #eclairage_g, #eclairage_d {
+        width: 70px;
+        height: 70px;
+        filter: blur(150px);
+    }
+}
+
 /* Sec boutique */
 .section-boutique {
     padding: 60px 20px;
@@ -523,3 +558,4 @@ footer {
         display: none;
     }
 }
+
