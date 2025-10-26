@@ -91,31 +91,30 @@ nav a:hover{
     scale: 1.05;
 }
 /*  nav respon */
-@media (max-width: 600px) {
-
-    nav {
-        width: 85%;
+@media (max-width: 768px) {
+    nav.bbh-sans-bartle-regular {
+        flex-direction: column; 
+        gap: 10px;
+        width: 90%; 
         height: auto;
-        gap: 20px;
-        flex-direction: column; /* Les liens passent en colonne */
-        top: 3%;
-        border-radius: 25px;
+        top: 2%;
         padding: 10px 0;
+        border-radius: 25px;
+        font-size: 12px;
     }
 
-    header nav a {
-        display: block;
-        width: 100%;
+    nav.bbh-sans-bartle-regular a {
+        width: 100%; 
         text-align: center;
-        font-size: 14px;
+        display: block;
         padding: 6px 0;
     }
 
     #logo {
         width: 15%;
-        margin-top: 20px;
-        margin-left: 0;
+        margin-top: 15px;
         position: relative;
+        left: 0;
     }
 
     #eclairage_g, #eclairage_d {
@@ -558,4 +557,5 @@ footer {
         display: none;
     }
 }
+
 
